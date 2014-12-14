@@ -1,5 +1,5 @@
-# Run `./build.sh` to build the Docker image used to "contain" Jekyll
-# Run `./update.sh` to run Jekyll (within a Docker instance) and produce the `_site` directory
+* Run `./build.sh` to build the Docker image used to "contain" Jekyll
+* Run `./update.sh` to run Jekyll (within a Docker instance) and produce the `_site` directory
 
 This should result in
 
