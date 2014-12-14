@@ -1,0 +1,45 @@
+      </article>
+    </section>
+  </div>
+
+  <div class='footer clear'>
+  <footer>
+    <div class='link-list'>
+      {% if page.previous %}
+      <h2>Previous post</h2>
+      <ul>
+        <li><a href='{{ site.url }}{{ page.previous.url }}'>{{ page.previous.title }}</a></li>
+      </ul>
+      {% else %}
+      &nbsp;
+      {% endif %}
+    </div>
+    <div class='link-list' style='text-align: left'>
+      {% if site.related_posts %}
+      <h2>Related posts</h2>
+      <ul>
+        {% for p in site.related_posts %}
+        <li><a href='{{ site.url }}{{ p.url }}'>{{ p.title }}</a></li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        &nbsp;
+      {% endif %}
+    </div>
+    <div class='link-list' style='text-align: right'>
+      <h2>Next post</h2>
+      {% if page.next %}
+      <ul>
+        <li><a href='{{ site.url }}{{ page.next.url }}'>{{ page.next.title }}</a></li>
+      </ul>
+      {% else %}
+      Yet to be written!
+      {% endif %}
+    </div>
+  </footer>
+  </div>
+
+{% include google-analytics.html %}
+
+</body>
+</html>

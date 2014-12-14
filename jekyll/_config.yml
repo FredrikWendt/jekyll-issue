@@ -1,0 +1,34 @@
+timezone: Europe/Stockholm
+encoding: utf-8
+
+name: "Fredrik Wendt"
+description: "Anteckningar av Fredrik Wendt"
+
+url: http://fredrik.wendt.se
+#baseurl: /apa/_site
+
+paginate: 20
+
+collections:
+  abstracts:
+    output: true # creates individual files
+    permalink: abstracts/:path/
+    layout: abstract
+  offerings:
+    output: true # creates individual files
+    permalink: services/:path/
+    layout: offering
+
+markdown: redcarpet
+permalink: pretty
+highlighter: pygments
+lsi: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      license: cc-by-sa

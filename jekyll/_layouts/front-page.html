@@ -1,0 +1,21 @@
+{% include front-matter-header.html %}
+
+	{{ content }}
+      </article>
+    </section>
+  </div>
+
+
+  <div class='blogging clear'>
+    <p>Latest blog posts</p>
+    <dl>
+    {% for p in site.posts limit:10 %}
+      {% unless p.draft %}
+      <dd><a href="{{ p.url }}">{{ p.title }}</a> {{ p.draft }}</dd>
+      {% endunless %}
+    {% endfor %}
+    <dd><a href="{{ site.url  }}/blog-index/">Index of all posts</a></dd>
+  </dl>
+  </div>
+
+{% include front-matter-footer.html %}
